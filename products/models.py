@@ -13,7 +13,7 @@ FLAG_TYPES = (
 class Product(models.Model):
     name = models.CharField(_('name'),max_length=100)
     flag = models.CharField(_('flag'),max_length=10,choices=FLAG_TYPES)
-    price = models.FloatField(-('price'))
+    price = models.FloatField(_('price'))
     image = models.ImageField(_('image'),upload_to='product')
     sku = models.IntegerField(_('sku'))
     subtitle = models.TextField(_('subtitle'),max_length=400)
