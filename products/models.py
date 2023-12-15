@@ -54,6 +54,10 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.user} - {self.product} - {self.rate}"
+    
+    
+    
+    
 class ProductImages(models.Model):
     product = models.ForeignKey(Product,verbose_name=('product'),related_name='product_image',on_delete=models.CASCADE)
     image = models.ImageField(_('image'),upload_to='productimages')
